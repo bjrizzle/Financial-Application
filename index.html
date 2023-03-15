@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  <style>
+    label:hover{
+      background: lightgreen;
+    }
+    .dropdown-content a:hover {
+      background-color: white}
+
+    .dropdown:hover .dropdown-content {
+  display: block;
+    }
+</style>
+<body>
+<!-- background -->
+<div class="bg-image"></div>
+<!-- title -->
+<div class="bg-text">
+  <h1>FINANCIAL APPLICATION CALCULATOR</h1>
+  <p>Manage your expenses and create savings goals today.</p>
+<br>
+<table>
+    <!-- Table 2x9 showing game statistics -->
+    <thead>
+      <tr>
+        <th><u><b>My Stats</b></u></th>
+        <th><u><b>Stat Description</b></u></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <form name="submit-to-google-sheet">
+            <div class="form-group col-lg-6">
+              <div class="dropdown">
+                <button class="dropbtn">Monthly Income: $</button>
+              </div>
+            </div>
+        </td>
+        <td><input type="text" name="userincome" class="form-control" id="userincome" onchange="updateDue()">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group col-lg-6">
+            <div class="dropdown">
+              <button class="dropbtn">Housing: $</button>
+              <div class="dropdown-content">
+                <a href="#">Input your housing expenses: Mortgage, Rent, Home Insurance, Utilities, etc.</a>
+              </div>
+            </div>
+        </td>
+        <td><input type="text" name="userrent" class="form-control" id="userrent" onchange="updateDue()">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group col-lg-6">
+            <div class="dropdown">
+              <button class="dropbtn">Groceries: $</button>
+              <div class="dropdown-content">
+                <a href="#">Input food expenses: Groceries, Eating Out, etc.</a>
+              </div>
+            </div>
+        </td>
+        <td><input type="text" name="usergroceries" class="form-control" id="usergroceries" onchange="updateDue()"></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group col-lg-6">
+            <div class="dropdown">
+              <button class="dropbtn">Transportation: $</button>
+              <div class="dropdown-content">
+                <a href="#">Input transportation expenses: Car payments, Insurance, Gas, Public Transport, Maintenance, etc.</a>
+              </div>
+            </div>
+        </td>
+        <td><input type="text" name="usergas/public transport" class="form-control" id="usergas/public transport" onchange="updateDue()"></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group col-lg-6">
+             <div class="dropdown">
+              <button class="dropbtn">Subscriptions: $</button>
+              <div class="dropdown-content">
+                <a href="#">Input subscribtion expenses: Phone, Wi-Fi, Netfix, Disney+, etc.</a>
+              </div>
+            </div>
+        </td>
+        <td><input type="text" name="usersubscriptions" class="form-control" id="usersubscriptions" onchange="updateDue()">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <div class="form-group col-lg-6">
+            <div class="dropdown">
+              <button class="dropbtn">Savings:</button>
+            </div>
+        </td>
+        <td><input type="text" name="usersavings" class="form-control" id="usersavings" onchange="updateDue()"></td>
+        <td><label>%</label></td>
+      </tr>
+       <tr>
+        <td>
+          <div class="form-group col-lg-6">
+            
+            <div class="dropdown">
+              <button class="dropbtn">Other: $</button>
+            </div>
+        </td>
+        <td><input type="text" name="userother" class="form-control" id="userother" onchange="updateDue()"></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-group col-lg-6">
+            <label for="exampleInputText">Remaining Cash per Month: $</label>
+        </td>
+        <td> <output type="text" name="remainingcash" class="form-control" id="remainingcash"></td>
+      </tr>
+    <td>
+      <br> 
+      <input class="resetbtn" type="reset" name="Reset">
+      <input class="submitbtn" type="submit" name="submit">
+ <!--     <input class="recommendation" onclick="recommendText()" type="submit" value="Recommendation"></form> -->
+      <input class="recommendation" onclick="window.location.href='https://codepen.io/Willms8/pen/QWVpMGw';" type="submit" value="Recommendation"></form>
+      <span id="success"></span>
+</br>
+</br>
+<button onclick="window.location.href='https://cdpn.io/pen/debug/KKxMMag';">View Charts</button>
+
+    </td>
+<!-- This part is for the output connected with the js -->
+          
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwGjg2obJmGpnccN50TUsxjtGiY6tHDQSJ3DtzUfYGZAb_ibAmz9XG351cwPF6Iq1r_/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const success = document.getElementById('success');
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            success.innerHTML=" ";
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+    </tbody>
+    <tfoot>
+    </tfoot>
+  </table> 
+ </br>
+<tr>
+  <br> 
+  </tr>
+<p> <output type="text" name="recommendation" class="form-control" id="rcmdText"> </p>
+</br>
+</br>
+
+<!-- credit -->
+<footer id="footerid"><b>Created by: Brooklin Risser, Camden Mergel, William Stewart, Shweta Kushan, Brandon Burks</br></br>
+Updated on: 3/2/2023</b></footer></div>
+</br>
+</br>
+</br>
+</body>
+</html>
