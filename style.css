@@ -1,0 +1,194 @@
+/* heading top of the page settings */
+header {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+  color: lightgreen;
+  font-family: monospace;
+}
+h2 {
+  font-size: 50px;
+  text-align: center;
+  color: lightgreen;
+  font-family: monospace;
+  padding: 7px;
+  background-color: black;
+}
+
+/* footer bottom of the page settings */
+footer {
+  text-align: center;
+  font-family: monospace;
+  font-size: 13px;
+}
+/* paragraph settings */
+p {
+  color: lightgreen;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Courier New', monospace;
+}
+/* table settings */
+form {
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Courier New', monospace;
+}
+
+element.style {
+}
+table {
+  background-color: #D3D3D3;
+  color: black;
+  text-align: center;
+  border: 20px solid white;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Courier New', monospace;
+}
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: #404040;
+  border-radius: 25px; /* Rounded Corners */
+  padding: 20px;
+  box-shaddow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+span {
+  color: #a3a2a2;
+}
+/* user input boxes in table */
+input {
+  box-shadow: 0 2px 20px #cccccc;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+  
+}
+/* background image */
+body {
+  background-image: url("https://wallpapercave.com/wp/wp7470629.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+
+.bg-image{
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.65); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: ;
+  left: 50%;
+  transform: translate(10%, 5%);
+  width: 82%;
+  padding: 20px;
+  text-align: center;
+}
+/* footer settings */
+#footerid{
+    background-color: #404040;
+    color: lightgreen;
+    padding: 20px;
+}
+/* reset button settings */
+input.resetbtn{
+  cursor: pointer;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 7px;
+  background-color: lightgreen;
+}
+/* submit button settings */
+input.submitbtn{
+  cursor: pointer;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 7px;
+  background-color: lightgreen;
+}
+/* allows user to hover over words with cursor being a pointer */
+.pointer {
+  cursor: pointer;
+}
+
+/* hover dropdown on table settings */
+.dropbtn {
+  background-color: lightgreen;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 350px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 7px;
+  text-decoration: none;
+  display: block;
+}
+
+/* sizing for the google sheets graph */
+iframe{
+  width: 620px;
+  height: 500px;
+}
+
+.recommendation{
+  background-color: lightgreen;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 7px;
+  cursor: pointer;
+}
+
+button {
+  background-color: lightgreen;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 7px;
+  cursor: pointer;
+}
